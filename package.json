@@ -1,8 +1,9 @@
 {
   "name": "quick-template-helper",
-  "displayName": "Quick模版",
+  "displayName": "Quick模板",
   "description": "create template",
-  "version": "0.0.1",
+  "publisher": "ymqiu",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.69.0"
   },

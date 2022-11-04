@@ -1,4 +1,4 @@
-# Quick 模版 简介
+# Quick 模版 简介 [GitHub 仓库地址](https://github.com/JingRen790838213/vscode-quick-template)
 
 ![image](https://github.com/JingRen790838213/vscode-quick-template/blob/main/public/quick-template-helper.png)
 
