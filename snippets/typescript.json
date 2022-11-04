@@ -1,0 +1,35 @@
+{
+  "createAPIFunction-GET": {
+    "prefix": "quick-get",
+    "body": [
+      "export const $1 = ($5) => request('$2', { method: '${3|GET,POST,DELETE,PUT|}', ${4|params,data|}: $5 }) "
+    ]
+  },
+  "createAPIFunction-POST": {
+    "prefix": "quick-post|delete|put",
+    "body": [
+      "export const $1 = (${5|data|}:Record<string,any>) => request('$2', { method: '${3|POST,DELETE,PUT|}', data }) "
+    ]
+  },
+
+  "convertTableColumnJson": {
+    "prefix": "quick-convert-columns",
+    "body": ["\n", "/*** @function QuickColumnConvert($1)*/", "\n"]
+  },
+  "convertJsonFormItem": {
+    "prefix": "quick-convert-json-form-items",
+    "body": ["\n", "/*** @function QuickJsonFormItemConvert($1)*/", "\n"]
+  },
+  "convertOptionList": {
+    "prefix": "quick-convert-options",
+    "body": ["\n", "/*** @function QuickOptionListConvert($1)*/", "\n"]
+  },
+  "convertCustom": {
+    "prefix": "quick-convert-customs",
+    "body": [
+      "",
+      "/*** @function QuickCustomConvert($1).format(<>\\$label</>)*/",
+      ""
+    ]
+  }
+}

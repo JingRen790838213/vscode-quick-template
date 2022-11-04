@@ -1,0 +1,150 @@
+{
+  "json-form-item": {
+    "prefix": "json-form-item",
+    "body": [
+      "{",
+      "  type: '${1|input,select,textArea|}',",
+      "  name: '$2',",
+      "  label:'$3',",
+      "  rules:[{required:true}]",
+      "},"
+    ]
+  },
+  "json-form-item-input": {
+    "prefix": "quick-json-form-item-input",
+    "body": [
+      "{",
+      "  type: 'input',",
+      "  label:'$1',",
+      "  name: '_$1',",
+      "  rules:[{required:${2|true,false|}}]",
+      "},"
+    ]
+  },
+  "json-form-item-select": {
+    "prefix": "quick-json-form-item-select",
+    "body": [
+      "{",
+      "  type: 'select',",
+      "  label:'$1',",
+      "  name: '_$1',",
+      "  optionList:[],",
+      "  rules:[{required:${2|true,false|}}]",
+      "},"
+    ]
+  },
+  "json-form-item-radio": {
+    "prefix": "quick-json-form-item-radio",
+    "body": [
+      "{",
+      "  type: 'radio',",
+      "  label:'$1',",
+      "  name: '_$1',",
+      "  optionList:[],",
+      "  rules:[{required:${2|true,false|}}]",
+      "},"
+    ]
+  },
+  "json-form-item-checkbox": {
+    "prefix": "quick-json-form-item-checkbox",
+    "body": [
+      "{",
+      "  type: 'checkbox',",
+      "  label:'$1',",
+      "  name: '_$1',",
+      "  optionList:[],",
+      "  rules:[{required:${2|true,false|}}]",
+      "},"
+    ]
+  },
+  "json-form-item-checkboxList": {
+    "prefix": "quick-json-form-item-checkboxList",
+    "body": [
+      "{",
+      "  type: 'checkboxList',",
+      "  label:'$1',",
+      "  name: '_$1',",
+      "  optionList:[],",
+      "  rules:[{required:${2|true,false|}}]",
+      "},"
+    ]
+  },
+  "json-form-item-inputNumber": {
+    "prefix": "quick-json-form-item-inputNumber",
+    "body": [
+      "{",
+      "  type: 'inputNumber',",
+      "  label:'$1',",
+      "  name: '_$1',",
+      "  rules:[{required:${2|true,false|}}]",
+      "},"
+    ]
+  },
+  "json-form-item-textArea": {
+    "prefix": "quick-json-form-item-textArea",
+    "body": [
+      "{",
+      "  type: 'textArea',",
+      "  label:'$1',",
+      "  name: '_$1',",
+      "  rules:[{required:${2|true,false|}}]",
+      "},"
+    ]
+  },
+
+  "json-form-item-datePicker": {
+    "prefix": "quick-json-form-item-datePicker",
+    "body": [
+      "{",
+      "  type: 'datePicker',",
+      "  label:'$1',",
+      "  name: '_$1',",
+      "  rules:[{required:${2|true,false|}}]",
+      "},"
+    ]
+  },
+  "json-form-item-timePicker": {
+    "prefix": "quick-json-form-item-timePicker",
+    "body": [
+      "{",
+      "  type: 'timePicker',",
+      "  label:'$1',",
+      "  name: '_$1',",
+      "  rules:[{required:${2|true,false|}}]",
+      "},"
+    ]
+  },
+  "json-form-item-cascader": {
+    "prefix": "quick-json-form-item-cascader",
+    "body": [
+      "{",
+      "  type: 'cascader',",
+      "  label:'$1',",
+      "  name: '_$1',",
+      "  optionList:[],",
+      "  rules:[{required:${2|true,false|}}]",
+      "},"
+    ]
+  },
+
+  "convertTableColumnJson": {
+    "prefix": "quick-convert-columns",
+    "body": ["\n", "/*** @function QuickColumnConvert($1)*/", "\n"]
+  },
+  "convertJsonFormItem": {
+    "prefix": "quick-convert-json-form-items",
+    "body": ["\n", "/*** @function QuickJsonFormItemConvert($1)*/", "\n"]
+  },
+  "convertOptionList": {
+    "prefix": "quick-convert-options",
+    "body": ["\n", "/*** @function QuickOptionListConvert($1)*/", "\n"]
+  },
+  "convertCustom": {
+    "prefix": "quick-convert-customs",
+    "body": [
+      "",
+      "/*** @function QuickCustomConvert($1).format(<>\\$label</>)*/",
+      ""
+    ]
+  }
+}

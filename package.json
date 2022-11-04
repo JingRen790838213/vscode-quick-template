@@ -1,0 +1,116 @@
+{
+  "name": "quick-template-helper",
+  "displayName": "Quick模版",
+  "description": "create template",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.69.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onFileSystem:memfs",
+    "onCommand:quick-template-helper.folder-creator",
+    "onCommand:quick-template-helper.tpl-panel-config",
+    "onWebviewPanel:tpl-panel-config",
+    "onLanguage:json",
+    "onLanguage:typescript",
+    "onLanguage:typescriptreact"
+  ],
+  "enabledApiProposals": [
+    "textEditorDrop"
+  ],
+  "main": "./dist/extension.js",
+  "icon": "public/quick-template-helper.png",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "typescript",
+        "path": "snippets/typescript.json"
+      },
+      {
+        "language": "typescriptreact",
+        "path": "snippets/typescriptreact.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "quick-template-helper.folder-creator",
+        "title": "新建【Quick模版】"
+      },
+      {
+        "command": "quick-template-helper.tpl-panel-config",
+        "title": "Quick模版配置页面"
+      },
+      {
+        "command": "quick-template-helper.quick-convert",
+        "title": "QuickConvert"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "quick-template-helper.folder-creator",
+          "group": "navigation",
+          "when": "explorerResourceIsFolder"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "quick-template-helper.quick-convert",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "yarn run compile-tests && yarn run compile && yarn run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js",
+    "dev": "webpack-dev-server"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.6",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
+    "@types/glob": "^7.2.0",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.69.0",
+    "@typescript-eslint/eslint-plugin": "^5.30.0",
+    "@typescript-eslint/parser": "^5.30.0",
+    "@vscode/test-electron": "^2.1.5",
+    "babel-loader": "^8.2.5",
+    "babel-plugin-import": "^1.13.5",
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.1",
+    "eslint": "^8.18.0",
+    "glob": "^8.0.3",
+    "html-webpack-plugin": "^5.5.0",
+    "less": "^2.7.3",
+    "less-loader": "6",
+    "mocha": "^10.0.0",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^8.2.0",
+    "typescript": "^4.7.4",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.3"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "antd": "^4.21.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
