@@ -1,6 +1,7 @@
 # Quick 模版 简介
 
 ![image](https://github.com/JingRen790838213/vscode-quick-template/blob/main/public/quick-template-helper.png)
+
 Quick 模版是一个自定义模版的管理工具，可以通过选择录入的模版快捷生成对应的目录文件。
 
 ## 功能说明
@@ -26,7 +27,7 @@ Quick 模版是一个自定义模版的管理工具，可以通过选择录入�
 
   实现原理：根据产品的需求习惯，使用飞书文档来写需求文案，例如习惯用飞书的排序列表功能做文案展开描述，我们就可以直接复制文案到代码里面进行一键转换，通过正则规则`/(\s*- |\s*\d+\. |^)/`进行匹配和分割，得出我们想要的字段名，再通过内置的方法进行转换出对应的格式。
 
-  <video src='https://github.com/JingRen790838213/vscode-quick-template/blob/main/public/convert-show.mp4' controls/>
+![image](https://github.com/JingRen790838213/vscode-quick-template/blob/main/public/5.gif)
 
 提供方法
 
